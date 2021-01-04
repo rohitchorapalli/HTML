@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <i onclick="thumsup()" class="fa fa-thumbs-up" style="font-size: 100px;"></i><span id="like_id">0</span>
+        <i onclick="thumsdown()" class="fa fa-thumbs-down" style="font-size: 100px;"></i><span id="dislike_id">0</span>
+    </body>
+    <script>
+        var like = 8;
+        var dislike=9;//golbal varaible 
+        function thumsup(){
+            if(document.getElementById("like_id").innerHTML == 0){
+            like=1;
+            dislike=0;
+            document.getElementById("like_id").innerHTML=like;
+            document.getElementById("dislike_id").innerHTML=dislike;
+            }
+            else{
+                like=0;
+                document.getElementById("like_id").innerHTML=like;
+            }
+        }
+
+          function thumsdown(){
+              like=0;
+              dislike=1;
+              if(document.getElementById("like_id").innerHTML == 0){
+                like=0;
+                dislike=1;
+                document.getElementById("like_id").innerHTML=like; 
+                document.getElementById("dislike_id").innerHTML=dislike; 
+              }
+              else{
+                  like=0;
+                  document.getElementById("like_id").innerHTML=like;
+              }
+          }
+        
+        
+    </script>
+</html>
